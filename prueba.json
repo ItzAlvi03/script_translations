@@ -1,0 +1,23 @@
+{
+    "common": {
+        "username": "hola",
+        "email": "email2",
+        "contrasenia": "contrasenia",
+        "password": "",
+        "rememberMe": "hola"
+    },
+    "error": {
+        "300": "Error 300",
+        "400": {
+            "prueba": "hola",
+            "prueba2": {
+                "final": "esto es el final"
+            },
+            "prueba3": "hola otra vez"
+        }
+    },
+    "error2": "hola",
+    "login":{
+        "rememberMe": "esto es un remember me"
+    }
+}
