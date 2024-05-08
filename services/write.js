@@ -27,6 +27,7 @@ function createJsonFile(data, translations, json){
 }
 
 function indexKeys(obj, prefix = '', txt = '') {
+    // Metodo recursivo para actualizar el string y seguir buscando más keys
     for (const key in obj) {
         const newPrefix = prefix ? `${prefix}.${key}` : key;
         if (typeof obj[key] === 'object' && obj[key] !== null) {
@@ -39,6 +40,9 @@ function indexKeys(obj, prefix = '', txt = '') {
 }
 
 function createTxtFile(translations, jsonData) {
+    // Se compara con el json original las traducciones agregadas al nuevo JSON
+    // En caso de encontrar alguna se elimina del JSON quedando como resultado solo
+    // los que no se han encontrado/usado en los componentes
     let txt = "*******************************\n" +
         "*                             *\n" +
         "*       Keys no usadas        *\n" +
@@ -48,7 +52,7 @@ function createTxtFile(translations, jsonData) {
         let translation = translations[i].split('.') || translations[i];
         if (translation.length <= 1) {
             let key = jsonData[translation];
-            // Si es una variable suelta no será un objeto por lo que lo imprimimos tal cual
+            // Si es una variable suelta no será un objeto por lo que lo eliminamos
             if (typeof key !== 'object') {
                 delete jsonData[translation]
             }

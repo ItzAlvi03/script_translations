@@ -1,12 +1,12 @@
 class Comparator {
-    component;
-    components = [];
-    jsonPath;
-    valid = true;
-    exception = [];
-    args = [];
-    required = ["component", "file"];
-    scriptType = "ts";
+    component; // Path de donde se encuentran todos los componentes
+    components = []; // Path de cada componente encontrado
+    jsonPath; // Path del json que se aporta
+    valid = true; // Si es valido significa que se puede continuar con la ejecución del script
+    exception = []; // Array con los valores que faltan por adjuntar
+    args = []; // Todos los parametros recogidos por consola
+    required = ["component", "file"]; // Datos mínimos necesarios
+    scriptType = "ts"; // Tipo de script que se está usando
 
     constructor(args) {
         // Los parametros de pasan tal que 'file=C:/workspace/object.json component=login'
@@ -20,7 +20,7 @@ class Comparator {
         // Metodo que chequea los valores recibidos y si están todos los requeridos
         this.valid = this.checkValues();
     }
-
+    
     parseArgs(args) {
         const newArgs = {};
         args.forEach(arg => {

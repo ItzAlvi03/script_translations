@@ -25,6 +25,7 @@ function getAllTranslations(htmlData, scriptData){
 }
 
 function searchHtmlTranslations(htmlData, translations){
+    // Buscamos y vamos descartando por caracteres especiales que suelen llevar los html al llamar al translate
     while(continuar){
         let num = htmlData.indexOf("{{");
         if(num !== -1){
@@ -52,6 +53,7 @@ function searchHtmlTranslations(htmlData, translations){
 }
 
 function searchScriptTranslations(scriptData, translations){
+    // Buscamos y vamos descartando por caracteres especiales que suelen llevar los ts/js al llamar al translate
     const palabra = ".instant(";
     let continuar = true;
     while(continuar){
