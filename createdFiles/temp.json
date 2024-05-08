@@ -1,1 +1,61 @@
-{"common":{"password":"","username":"hola","email":"email2"},"error":{},"login":{"rememberMe":"esto es un remember me"}}
+{
+    "changePassword": {
+        "newPassword": "Nueva contraseña",
+        "confirmPassword": "Confirmar contraseña",
+        "title": "Cambiar contraseña"
+    },
+    "common": {
+        "password": "Contraseña",
+        "username": "Nombre Usuario",
+        "email": "Correo electrónico",
+        "cancel": "Cancelar"
+    },
+    "error": {
+        "empty_credentials": "Algunos de los datos están vacíos, inténtelo de nuevo.",
+        "password_spaces": "La contraseña no puede contener espacios, inténtelo de nuevo.",
+        "password_max_length": "La contraseña no puede tener más de 16 carácteres.",
+        "password_min_length": "La contraseña tiene que tener mínimo 6 carácteres.",
+        "password_not_same": "Las contraseñas no coinciden, inténtelo de nuevo.",
+        "server_error": "Ocurrió un error en el servidor, inténtelo de nuevo.",
+        "username_min_length": "El nombre de usuario tiene que tener mínimo 5 carácteres.",
+        "username_max_length": "El nombre de usuario no puede tener más de 30 carácteres.",
+        "notFound": "Página no encontrada",
+        "email_min_length": "El correo electrónico no puede estar vacío.",
+        "email_max_length": "El correo electrónico no puede tener más de 50 carácteres.",
+        "email_invalid": "El formato del correo electrónico no es válido.",
+        "username_spaces": "El nombre de usuario no puede contener espacios, inténtelo de nuevo."
+    },
+    "spinner": {
+        "change_password": "Cambiando contraseña",
+        "login": "Iniciando Sesion",
+        "recovery_password": "Enviando email",
+        "signup": "Creando cuenta",
+        "user_validation": "Verificando la cuenta"
+    },
+    "success": {
+        "change_password": "Se ha cambiado correctamente la contraseña de su cuenta.",
+        "login": "Se ha iniciado sesión correctamente.",
+        "recovery_password": "Compruebe el email que le acabamos de enviar para poder recuperar su contraseña.",
+        "signup": "Le acabamos de enviar un correo para verificar su cuenta en 'Alvify'",
+        "user_validation": "Tu cuenta ha sido validada correctamente."
+    },
+    "home": {
+        "welcome": "Bienvenido de nuevo"
+    },
+    "login": {
+        "rememberMe": "Recordarme",
+        "forgotPassword": "¿Olvidaste tu contraseña?",
+        "login": "Iniciar sesión",
+        "signup": "Registrarse"
+    },
+    "recoveryPassword": {
+        "title": "Recuperación contraseña",
+        "sendEmail": "Enviar email"
+    },
+    "signup": {
+        "createAccount": "Crear cuenta"
+    },
+    "userValidation": {
+        "return": "Redirigiendo a página de inicio de sesión en"
+    }
+}

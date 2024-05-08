@@ -1,23 +1,70 @@
 {
     "common": {
-        "username": "hola",
-        "email": "email2",
-        "contrasenia": "contrasenia",
-        "password": "",
-        "rememberMe": "hola"
-    },
-    "error": {
-        "300": "Error 300",
-        "400": {
-            "prueba": "hola",
-            "prueba2": {
-                "final": "esto es el final"
-            },
-            "prueba3": "hola otra vez"
+        "username": "Nombre Usuario",
+        "password": "Contraseña",
+        "email": "Correo electrónico",
+        "cancel": "Cancelar",
+        "prueba": {
+            "hola": "hola"
         }
     },
-    "error2": "hola",
-    "login":{
-        "rememberMe": "esto es un remember me"
+    "error": {
+        "server_error": "Ocurrió un error en el servidor, inténtelo de nuevo.",
+        "notFound": "Página no encontrada",
+        "user_not_found": "El usuario no existe o las credenciales son incorrectas, inténtelo de nuevo.",
+        "user_exists": "El usuario ya existe, inténtelo de nuevo",
+        "empty_credentials": "Algunos de los datos están vacíos, inténtelo de nuevo.",
+        "username_min_length": "El nombre de usuario tiene que tener mínimo 5 carácteres.",
+        "username_max_length": "El nombre de usuario no puede tener más de 30 carácteres.",
+        "username_spaces": "El nombre de usuario no puede contener espacios, inténtelo de nuevo.",
+        "password_min_length": "La contraseña tiene que tener mínimo 6 carácteres.",
+        "password_max_length": "La contraseña no puede tener más de 16 carácteres.",
+        "password_spaces": "La contraseña no puede contener espacios, inténtelo de nuevo.",
+        "password_not_same": "Las contraseñas no coinciden, inténtelo de nuevo.",
+        "email_min_length": "El correo electrónico no puede estar vacío.",
+        "email_max_length": "El correo electrónico no puede tener más de 50 carácteres.",
+        "email_invalid": "El formato del correo electrónico no es válido."
+    },
+    "success": {
+        "login": "Se ha iniciado sesión correctamente.",
+        "signup": "Le acabamos de enviar un correo para verificar su cuenta en 'Alvify'",
+        "user_validation": "Tu cuenta ha sido validada correctamente.",
+        "recovery_password": "Compruebe el email que le acabamos de enviar para poder recuperar su contraseña.",
+        "change_password": "Se ha cambiado correctamente la contraseña de su cuenta."
+    },
+    "login": {
+        "rememberMe": "Recordarme",
+        "forgotPassword": "¿Olvidaste tu contraseña?",
+        "login": "Iniciar sesión",
+        "signup": "Registrarse"
+    },
+    "signup": {
+        "createAccount": "Crear cuenta"
+    },
+    "home":{
+        "welcome": "Bienvenido de nuevo"
+    },
+    "recoveryPassword": {
+        "title": "Recuperación contraseña",
+        "sendEmail": "Enviar email"
+    },
+    "changePassword": {
+        "title": "Cambiar contraseña",
+        "newPassword": "Nueva contraseña",
+        "confirmPassword": "Confirmar contraseña"
+    },
+    "userValidation":{
+        "return": "Redirigiendo a página de inicio de sesión en"
+    },
+    "jsonComparator": {
+        "title": "Comparador de JSON",
+        "compare": "Comparar"
+    },
+    "spinner": {
+        "login": "Iniciando Sesion",
+        "signup": "Creando cuenta",
+        "user_validation": "Verificando la cuenta",
+        "recovery_password": "Enviando email",
+        "change_password": "Cambiando contraseña"
     }
 }

@@ -6,7 +6,7 @@ const writer = require("./services/write");
 // Recogemos los argumentos pasados por comando
 const args = process.argv.slice(2);
 // Comprobamos si es valido(están todos los parametros) y si no es válido se imprime que falta
-var comparator = new Comparator(args);
+let comparator = new Comparator(args);
 // Se imprimirán los datos si está todo correcto o las excepciones encontradas
 if(!comparator.valid) comparator.exceptions();
 else{

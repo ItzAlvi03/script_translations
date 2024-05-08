@@ -3,13 +3,13 @@ const translate = require("./translations");
 const fs = require("node:fs");
 
 function createJsonFile(data, translations, json){
-    var newTranslations = [];
-    for(var i = 0; i < translations.length; i++){
-        var collect = ""; // Aquí se concatena todas las keys para añadirlas en el txt si no existe
-        var data_copy = data; // Es la variable que contiene el valor de las keys que contenga nuestro nuevo json
-        var translation = translations[i].split('.') || translations[i]; // Dividimos el string para poder buscar en el json el valor "common.username" tal que: "['common']['username']"
-        var position = json; // Esta variable indicará por que cabezera del json vamos
-        for(var j = 0; j < translation.length; j++){
+    let newTranslations = [];
+    for(let i = 0; i < translations.length; i++){
+        let collect = ""; // Aquí se concatena todas las keys para añadirlas en el txt si no existe
+        let data_copy = data; // Es la variable que contiene el valor de las keys que contenga nuestro nuevo json
+        let translation = translations[i].split('.') || translations[i]; // Dividimos el string para poder buscar en el json el valor "common.username" tal que: "['common']['username']"
+        let position = json; // Esta variable indicará por que cabezera del json vamos
+        for(let j = 0; j < translation.length; j++){
             if(data_copy[translation[j]] === undefined) j = translation.length; // Si una key del componente no se encuentra en el json no se continua añadiendolo
             else{
                 collect += translation[j] + ".";
@@ -39,22 +39,22 @@ function indexKeys(obj, prefix = '', txt = '') {
 }
 
 function createTxtFile(translations, jsonData) {
-    var txt = "*******************************\n" +
+    let txt = "*******************************\n" +
         "*                             *\n" +
         "*       Keys no usadas        *\n" +
         "*                             *\n" +
         "*******************************\n";
-    for (var i = 0; i < translations.length; i++) {
-        var translation = translations[i].split('.') || translations[i];
+    for (let i = 0; i < translations.length; i++) {
+        let translation = translations[i].split('.') || translations[i];
         if (translation.length <= 1) {
-            var key = jsonData[translation];
+            let key = jsonData[translation];
             // Si es una variable suelta no será un objeto por lo que lo imprimimos tal cual
             if (typeof key !== 'object') {
                 delete jsonData[translation]
             }
         } else{
-            var json = jsonData;
-            for(var j = 0; j < translation.length; j++){
+            let json = jsonData;
+            for(let j = 0; j < translation.length; j++){
                 json = json[translation[j]];
                 if(j == translation.length-2){
                     delete json[translation[j+1]];
@@ -80,13 +80,13 @@ function generateFiles(jsonData, htmlData, scriptData, json, translations){
 
 function writeAllFiles(json, jsonData, translations, path){
     console.log("Creating new files...")
-    const newJson = JSON.stringify(json);
+    const newJson = JSON.stringify(json, null, 4);
     if(newJson === "{}") console.log("Error -> The new JSON is empty.");
     else {
         fs.writeFileSync(path + "json", newJson);
         console.log("\t->JSON file have been created successfully in createdFiles field.");
         if(translations.length > 0){
-            var txt = createTxtFile(translations, jsonData);
+            let txt = createTxtFile(translations, jsonData);
             fs.writeFileSync(path + "txt", txt);
             console.log("\t->TXT file have been created successfully in createdFiles field.");
         } else{

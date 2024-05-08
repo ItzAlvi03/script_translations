@@ -42,7 +42,7 @@ function readAllFiles(comparator, jsonData, htmlData, scriptData, component){
 }
 
 function readFile(comparator, path, exception){
-    var data;
+    let data;
     try {
         data = fs.readFileSync(path, 'utf8') || null;
         comparator.valid = true;
